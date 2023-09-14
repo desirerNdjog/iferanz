@@ -1,0 +1,37 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/messagerie
+    username: qms
+    password: Juniorndjog@007
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    generate-ddl: true
+    hibernate:
+      hbm2ddl:
+        auto: none
+      ddl-auto: update
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: false
+  application:
+    name: messagerie-service
+
+logging:
+  level:
+    web: debug
+
+server:
+  port: 8085
+
+eureka:
+  client:
+    service-url:
+      registerWithEureka: true
+      fetchRegistry: true
+      defaultZone: http://localhost:8761/eureka
+    prefer-ip-address: true
+
+
+
+
+

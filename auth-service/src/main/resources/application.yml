@@ -1,0 +1,43 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/authentification
+    username: qms
+    password: Juniorndjog@007
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: false
+  application:
+    name: auth-service
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ndjogdesire@gmail.com
+    password: dtpdssdgfygqcwth
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+logging:
+  level:
+    web: debug
+
+server:
+  port: 8081
+
+
+eureka:
+  client:
+    service-url:
+      registerWithEureka: true
+      fetchRegistry: true
+      defaultZone: http://localhost:8761/eureka
+  prefer-ip-address: true
+
